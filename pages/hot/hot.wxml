@@ -1,0 +1,35 @@
+
+<block wx:if="{{dataReady}}" >
+  <view class='search'>
+  <input placeholder='请输入搜索内容'></input>
+  </view>  
+  <swiper indicator-dots="{{indicatorDots}}"  
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+        <block wx:for="{{imgUrls}}" wx:key="item.url">  
+          <swiper-item>  
+            <navigator url="{{item.link}}" hover-class="navigator-hover">  
+              <image src="{{item.url}}" class="slide-image" width="355" height="150"/>  
+            </navigator>   
+          </swiper-item>  
+        </block>  
+  </swiper>
+  <view class='hot_info'>
+    <view class='hot_item'>
+      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+      <text>这是放在图片上面的</text>
+    </view>
+    <view class='hot_item'>
+      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+      <text>这是放在图片上面的</text>
+    </view>
+    <view class='hot_item'>
+      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
+      <text>这是放在图片上面的</text>
+    </view>
+  </view>
+</block>
+<block wx:else>
+ddd
+</block>
+
+

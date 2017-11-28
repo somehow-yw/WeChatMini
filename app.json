@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/hot/hot",
+    "pages/care/care",
+    "pages/mine/mine",
+    "pages/new/new"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#45C8DC",
+    "navigationBarTitleText": "歪猴的碎碎念",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#47a86c",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/hot/hot",
+      "iconPath": "dist/tabBarImg/conversation0.png",
+      "selectedIconPath": "dist/tabBarImg/conversation.png",
+      "text": "天下事"
+    },{
+      "pagePath": "pages/new/new",
+      "iconPath": "dist/tabBarImg/will0.png",
+      "selectedIconPath": "dist/tabBarImg/will1.png",
+      "text": "新鲜事"
+    },{
+      "pagePath": "pages/care/care",
+      "iconPath": "dist/tabBarImg/conversation0.png",
+      "selectedIconPath": "dist/tabBarImg/start.png",
+      "text": "心里事"
+    },{
+      "pagePath": "pages/mine/mine",
+      "iconPath": "dist/tabBarImg/mine0.png",
+      "selectedIconPath": "dist/tabBarImg/mine.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 100000,
+    "downloadFile": 100000
+  },
+  "debug": true
+}
