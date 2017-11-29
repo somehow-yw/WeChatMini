@@ -20,7 +20,8 @@ Page({
     circular: true,
     userInfo: {},
     hotData: {},
-    dataReady: false
+    dataReady: false,
+    smallImgs: [] // 小的图片的路径
   },
   onLoad: function () {
     this.getHotData();
@@ -38,11 +39,21 @@ Page({
       },
       success: function (res) {
         if(res.statusCode === 200) {
-          vm.data.dataReady = true,
           vm.data.hotData = res.data;
-          console.log('vm.data.hotData', vm.data.hotData);
+          var imgs = [], simgs = [];
+          for (var item of vm.data.hotData.subjects.slice(0, 3)) {
+            var imgObj = {url: item.images.small}
+            imgs.push(imgObj)
+          }
+          
+          for (var sImgs of vm.data.hotData.subjects) {
+            var sImgObj = { url: sImgs.images.small, id: sImgs.id, intro: sImgs.title, year: sImgs.year, avg: sImgs.rating.average, stars: sImgs.rating.stars}
+            simgs.push(sImgObj);
+          }
           vm.setData({
-            dataReady: true
+            dataReady: true,
+            imgUrls: imgs,
+            smallImgs: simgs
           })
           wx.setNavigationBarTitle({
             title: res.data.title

@@ -14,22 +14,34 @@
         </block>  
   </swiper>
   <view class='hot_info'>
-    <view class='hot_item'>
-      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
-      <text>这是放在图片上面的</text>
-    </view>
-    <view class='hot_item'>
-      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
-      <text>这是放在图片上面的</text>
-    </view>
-    <view class='hot_item'>
-      <image src='http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'></image>
-      <text>这是放在图片上面的</text>
+    <view class='hot_item' wx:for="{{smallImgs}}" wx:key="item.id">
+      <image src='{{item.url}}'></image>
+      <text>{{item.intro}}年份:{{item.year}}</text>
     </view>
   </view>
 </block>
 <block wx:else>
-ddd
+  <view class="spinner">
+    <view class="spinner-container container1">
+      <view class="circle1"></view>
+      <view class="circle2"></view>
+      <view class="circle3"></view>
+      <view class="circle4"></view>
+    </view>
+    <view class="spinner-container container2">
+      <view class="circle1"></view>
+      <view class="circle2"></view> `
+      <view class="circle3"></view>
+      <view class="circle4"></view>
+    </view>
+    <view class="spinner-container container3">
+      <view class="circle1"></view>
+      <view class="circle2"></view>
+      <view class="circle3"></view>
+      <view class="circle4"></view>
+    </view>
+  </view>
+  <view class='wait'>数据信息加载中...壮士请骚等...</view>
 </block>
 
 
